@@ -25,7 +25,7 @@ spec:
   port:
     targetPort: 80
   tls:
-    insecureEdgeTerminationPolicy: Allow
+    insecureEdgeTerminationPolicy: Redirect
     termination: edge
   to:
     kind: Service
