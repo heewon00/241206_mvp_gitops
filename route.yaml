@@ -19,11 +19,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: frontend
+  name: frontend-route
 spec:
   host: frontend-mvp-test.apps.211-34-231-93.nip.io
   port:
-    targetPort: 80
+    targetPort: frontend
   tls:
     insecureEdgeTerminationPolicy: Redirect
     termination: edge
