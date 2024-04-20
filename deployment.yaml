@@ -24,3 +24,5 @@ spec:
             value: "pponpub" 
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      - name: frontend-secret
