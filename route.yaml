@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: frontend-route
 spec:
-  host: frontend-mvp-test.apps.211-34-231-93.nip.io
+  host: frontend-mvp.apps.211-34-231-93.nip.io
   port:
     targetPort: frontend
   tls:
