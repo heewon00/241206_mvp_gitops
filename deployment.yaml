@@ -21,7 +21,7 @@ spec:
         #image: shclub/edu12-3:v11
         env:
           - name: BACKEND_API_URL
-            value: "pponpub" 
+            value: "apigw" 
         ports:
         - containerPort: 80
       imagePullSecrets:
