@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/cloudnative-mvp1/mvp_frontend:v7
+        image: ghcr.io/cloudnative-mvp1/mvp_frontend:v6
         imagePullPolicy: Always
         #image: shclub/edu12-3:v11
         env:
