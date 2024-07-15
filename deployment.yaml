@@ -23,5 +23,5 @@ spec:
             value: "apigw" 
         ports:
         - containerPort: 80
-      imagePullSecrets:
-      - name: frontend-secret
+#      imagePullSecrets:
+#      - name: frontend-secret
