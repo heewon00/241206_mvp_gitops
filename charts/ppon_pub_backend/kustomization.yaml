@@ -1,0 +1,8 @@
+kind: Kustomization
+resources:
+- deployment.yaml
+- service.yaml
+#- route.yaml
+images:
+- name: icishub.azurecr.io/azure-poc/mvp_ppon_pub_backend
+  newTag: "v1"
