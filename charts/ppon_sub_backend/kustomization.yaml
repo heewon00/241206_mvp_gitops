@@ -5,5 +5,5 @@ resources:
 - service.yaml
 #- route.yaml
 images:
-- name: icishub.azurecr.io/azure-poc/mvp_ppon_sub_backend
+- name: icishub.azurecr.io/azure-edu/mvp_ppon_sub_backend
   newTag: "v1"
