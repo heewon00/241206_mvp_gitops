@@ -4,5 +4,5 @@ resources:
 - deployment.yaml
 - service.yaml
 images:
-- name: icishub.azurecr.io/azure-poc/mvp_apigw
+- name: icishub.azurecr.io/azure-edu/mvp_apigw
   newTag: "v1"
