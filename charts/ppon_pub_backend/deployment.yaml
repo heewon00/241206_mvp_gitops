@@ -15,8 +15,7 @@ spec:
     spec:
       containers:
       - name: pponpub
-        image: icishub.azurecr.io/azure-poc/mvp_ppon_pub_backend
-        #image: ghcr.io/cloudnative-mvp1/mvp_pponsub_backend:v1
+        image: icishub.azurecr.io/azure-edu/mvp_ppon_pub_backend
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
