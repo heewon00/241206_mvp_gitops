@@ -4,5 +4,5 @@ resources:
 - deployment.yaml
 - service.yaml
 images:
-- name: icishub.azurecr.io/azure-poc/mvp_baseinfo_backend
+- name: icishub.azurecr.io/azure-edu/mvp_baseinfo_backend
   newTag: "v1"
