@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: baseinfo
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: baseinfo
+  template:
+    metadata:
+      labels:
+        app: baseinfo
+    spec:
+      containers:
+      - name: baseinfo
+        image: icishub.azurecr.io/azure-poc/mvp_baseinfo_backend
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: 1
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        # readinessProbe:
+        #     httpGet:
+        #       path: /mvp/actuator/health/readiness
+        #       port: 8080
+        #       scheme: HTTP
+        #     initialDelaySeconds: 300
+        #     timeoutSeconds: 30
+        #     periodSeconds: 15
+        #     successThreshold: 1
+        #     failureThreshold: 5
+        # livenessProbe:
+        #     httpGet:
+        #       path: /mvp/actuator/health/liveness
+        #       port: 8080
+        #       scheme: HTTP
+        #     initialDelaySeconds: 300
+        #     timeoutSeconds: 30
+        #     periodSeconds: 15
+        #     successThreshold: 1
+        #     failureThreshold: 5    
+        env:
+          - name: SPRING_PROFILES_ACTIVE
+            value: "prd"
+          - name: SPRING_CONTEXT
+            value: "baseinfo"
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: HOST_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
