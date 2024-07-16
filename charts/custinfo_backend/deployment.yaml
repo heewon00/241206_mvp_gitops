@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: custinfo
-        image: icishub.azurecr.io/azure-poc/mvp_custinfo_backend
+        image: icishub.azurecr.io/azure-edu/mvp_custinfo_backend
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
