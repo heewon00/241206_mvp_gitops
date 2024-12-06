@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: pponsub
-        image: icishub.azurecr.io/azure-edu/mvp_ppon_sub_backend
+        image: icishub.azurecr.io/heewon00/241206_mvp_ppon_sub_backend
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
