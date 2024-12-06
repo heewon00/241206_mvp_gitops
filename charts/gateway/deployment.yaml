@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: apigw
-        image: icishub.azurecr.io/azure-edu/mvp_apigw
+        image: icishub.azurecr.io/heewon00/241206_mvp_apigw
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
